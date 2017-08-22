@@ -16,6 +16,8 @@
 \usepackage{marvosym}
 \usepackage{xcolor}
 \usepackage[colorlinks]{hyperref}
+\usepackage{everypage}
+\usepackage{lipsum,graphicx}
 
 
 %======Colores
@@ -33,7 +35,6 @@
 
 \hypersetup{
 	linkcolor = titleColor,
-	cirecolor = sectionColor,
 	urlcolor = sectionColor,
 	colorlinks = true,
 }
@@ -53,6 +54,7 @@
 
 %======Titulos
 \newcommand{\varSubTitle}{}
+\let\varSubstitle = \subtitle
 \newcommand{\subtitle}[1]{\renewcommand{\varSubTitle}{#1}}
 
 \newcommand{\varTitle}[1]{}
@@ -60,7 +62,6 @@
 \renewcommand{\title}[1]{%	
 	\varTitle{{\Huge\color{titleColor}#1}%
 	\\{\LARGE \color{subTitleColor}\varSubTitle}~{}\bigskip\\\color{authorColor}\rule{\textwidth}{1mm}}%
-
 
 \newcommand{\varAuthor}[1]{}
 \let\varAuthor=\author
@@ -79,7 +80,7 @@
 
 \newcommand{\varSection}[1]{}
 \let\varSection=\section
-\renewcommand{\section}[1]{{\color{sectionColor}\varSection{#1}}}}
+\renewcommand{\section}[1]{{\color{sectionColor}\varSection{#1}}}
 
 
 \newcommand{\varSubSection}[1]{}
