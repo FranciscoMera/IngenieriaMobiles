@@ -60,13 +60,12 @@
 \renewcommand{\title}[1]{%	
 	\varTitle{{\Huge\color{titleColor}#1}%
 	\\{\LARGE \color{subTitleColor}\varSubTitle}~{}\bigskip\\\color{authorColor}\rule{\textwidth}{1mm}}%
-}
 
 
 \newcommand{\varAuthor}[1]{}
 \let\varAuthor=\author
 \renewcommand{\author}[1]{%
-	\varAuthor{\color{authorColor}#1\\\color{subTitleColor}\varOrganization}%
+	\varAuthor{\color{authorColor}#1\\}%
 }
 
 \renewcommand{\labelitemi}{\color{sectionColor}\textbullet}
